@@ -3,9 +3,12 @@
 Nombre: Whisper
 
 Enlace: https://huggingface.co/spaces/openai/whisper
+
+
 2. ¿Qué hace el agente?
 
 El agente toma como entrada un archivo de audio, en el cual luego de analizarlo por medio de sus actuadores internos, es capaz de traducirlo a formato texto, es decir, es un traductor de audio a texto.
+
 
 3. Análisis PEAS
 
@@ -16,6 +19,8 @@ Environment El agente está hecho en hugging face, corriendo este en la web y si
 Actuators Tras hacer el proceso interno, el agente actua dando al usuario un archivo en texto, la cual es la traducción del formato audio que se le dio.
 
 Sensors Recibe como entrada un archivo en formato audio.
+
+
 4. Clasificación del entorno
 
 Propiedad Clasificación Justificación
@@ -32,9 +37,11 @@ Discreto No Hablamos de un audio, el cual está compuesto por ondas y frecuencia
 
 Conocido Sí El agente ya sabe que acciones puede realizar (transcribir y como interpretar), no está explorando ni aprendiendo en medio de la ejecución.
 
+
 5. ¿Qué tipo de programa de agente creen que es?
 
 Diria que agente basado en modelo, puesto que no responde unicamente a palabra por palabra, sino que analiza las frases enteras para tener una mayor capacidad de analisis, así pudiendo analizar mas palabras y pudiendo dar la transcripción correcta al no ver palabra por palabra sino el todo, el contexto de la frase. El modelo también diria que fue entrenado en su fase de entrenamiento, pero durante ya su uso no continua aprendiendo ni se modifica mediante el uso, entonces diria que se descartaria completamente el agente de aprendizaje, que seria el que uno podria llegar a pensar que podria ser.
+
 
 Discusión en clase
 
