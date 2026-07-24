@@ -9,7 +9,6 @@ El agente toma como entrada un archivo de audio, en el cual luego de analizarlo 
 
 3. Análisis PEAS
 
-
 Performance El agente hace bien su trabajo cuando es capaz de darle al usuario un texto con alta precisión, siendo la precisión en este caso el error entre las palabras dichas en forma oral, y las palabras dadas por el agente, buscando minimizar siempre la diferencia entre lo dicho, y lo escrito. 
 
 Environment El agente está hecho en hugging face, corriendo este en la web y siendo opensource, pudiendo analizar todo su codigo y su environment en general.
@@ -36,3 +35,14 @@ Conocido Sí El agente ya sabe que acciones puede realizar (transcribir y como i
 5. ¿Qué tipo de programa de agente creen que es?
 
 Diria que agente basado en modelo, puesto que no responde unicamente a palabra por palabra, sino que analiza las frases enteras para tener una mayor capacidad de analisis, así pudiendo analizar mas palabras y pudiendo dar la transcripción correcta al no ver palabra por palabra sino el todo, el contexto de la frase. El modelo también diria que fue entrenado en su fase de entrenamiento, pero durante ya su uso no continua aprendiendo ni se modifica mediante el uso, entonces diria que se descartaria completamente el agente de aprendizaje, que seria el que uno podria llegar a pensar que podria ser.
+
+Discusión en clase
+
+¿Dos Spaces diferentes pueden compartir el mismo tipo de entorno?
+Si nos referimos a la clasificación del entorno y que posean toda las mismas caracteristicas, diria que si, puesto que dos modelos pueden ser observables, deterministas, episodicos, estaticos, discretos y conocidos, pero con objetivos, sensores, actuadores diferentes, siendo esto lo que el agente aportará al usuario lo diferente, mas sin embargo el entorno si podria ser el mismo.
+
+¿Es posible saber con certeza qué tipo de agente implementa un Space únicamente observándolo?
+Es dificil afirmar que si, puesto que se tendria que testear y ver la funcionalidad interna de este, por ejemplo, cosas como la estocasticidad del modelo se podrian reconocer al ver como está implementado, puesto que si se testea muchas veces con ciertos test-cases especificos o no se usan edge-cases para ponerlo al limite, podriamos pasar por alto este tipo de cosas.
+
+¿Qué diferencia existe entre el comportamiento observable de un agente y su implementación interna?
+Diria que la diferencia varia como mencioné en la anterior pregunta en cosas como la estocasticidad, pudiendo estas ayudar a que el modelo sea mas versatil para diferentes situaciones, mas sin embargo si esto el usuario no lo conoce al no haber visto su implementación, puede pasar desapercibido en el modelo, por ejemplo, si se ven algoritmos como el descenso de gradiente estocastico, y se ve simplemente funcionando con ciertos ejemplos en optimización, se puede llegar a confundir con otros algoritmos de descenso de gradiente, puesto que su funcionalidad para ciertos test-cases, hace que la observabilidad haga "invisible" estos aspectos de la implementación interna.
